@@ -15,4 +15,4 @@ java -jar $JAR generate \
   -g kotlin \
   -o . \
   --global-property models,modelTests=false \
-  --additional-properties=packageName=io.github.yono_ms.model,serializationLibrary=kotlinx_serialization
+  --additional-properties=packageName=io.github.yono_ms.model,serializationLibrary=kotlinx_serialization,useContextualSerialization=true
