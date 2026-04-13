@@ -1,10 +1,11 @@
 plugins {
-    kotlin("jvm") version "1.9.24"
+    kotlin("jvm") version "1.9.0"
+    kotlin("plugin.serialization") version "1.9.0"
     `maven-publish`
 }
 
 group = "io.github.yono_ms"
-version = "0.0.1"
+version = "0.0.2"
 
 repositories {
     mavenCentral()
@@ -30,4 +31,12 @@ publishing {
             }
         }
     }
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+}
+
+kotlin {
+    jvmToolchain(17)
 }
