@@ -42,13 +42,14 @@ import kotlinx.serialization.Contextual
  * @param forksCount 
  * @param language 
  * @param owner 
+ * @param updatedAt 
  */
 @Serializable
 
 data class Repository (
 
     @SerialName(value = "id")
-    val id: kotlin.Int? = null,
+    val id: kotlin.Long? = null,
 
     @SerialName(value = "name")
     val name: kotlin.String? = null,
@@ -59,8 +60,8 @@ data class Repository (
     @SerialName(value = "private")
     val `private`: kotlin.Boolean? = null,
 
-    @SerialName(value = "html_url")
-    val htmlUrl: kotlin.String? = null,
+    @Contextual @SerialName(value = "html_url")
+    val htmlUrl: java.net.URI? = null,
 
     @SerialName(value = "description")
     val description: kotlin.String? = null,
@@ -75,7 +76,10 @@ data class Repository (
     val language: kotlin.String? = null,
 
     @SerialName(value = "owner")
-    val owner: User? = null
+    val owner: User? = null,
+
+    @Contextual @SerialName(value = "updated_at")
+    val updatedAt: java.time.OffsetDateTime? = null
 
 ) {
 
