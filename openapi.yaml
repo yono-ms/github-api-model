@@ -37,6 +37,18 @@ components:
   schemas:
     Repository:
       type: object
+      required:
+        - id
+        - name
+        - full_name
+        - private
+        - owner
+        - html_url
+        - description
+        - stargazers_count
+        - forks_count
+        - language
+        - updated_at
       properties:
         id:
           type: integer

@@ -49,37 +49,37 @@ import kotlinx.serialization.Contextual
 data class Repository (
 
     @SerialName(value = "id")
-    val id: kotlin.Long? = null,
+    val id: kotlin.Long,
 
     @SerialName(value = "name")
-    val name: kotlin.String? = null,
+    val name: kotlin.String,
 
     @SerialName(value = "full_name")
-    val fullName: kotlin.String? = null,
+    val fullName: kotlin.String,
 
     @SerialName(value = "private")
-    val `private`: kotlin.Boolean? = null,
+    val `private`: kotlin.Boolean,
 
     @Contextual @SerialName(value = "html_url")
-    val htmlUrl: java.net.URI? = null,
+    val htmlUrl: java.net.URI,
 
     @SerialName(value = "description")
-    val description: kotlin.String? = null,
+    val description: kotlin.String?,
 
     @SerialName(value = "stargazers_count")
-    val stargazersCount: kotlin.Int? = null,
+    val stargazersCount: kotlin.Int,
 
     @SerialName(value = "forks_count")
-    val forksCount: kotlin.Int? = null,
+    val forksCount: kotlin.Int,
 
     @SerialName(value = "language")
-    val language: kotlin.String? = null,
+    val language: kotlin.String,
 
     @SerialName(value = "owner")
-    val owner: User? = null,
+    val owner: User,
 
     @Contextual @SerialName(value = "updated_at")
-    val updatedAt: java.time.OffsetDateTime? = null
+    val updatedAt: java.time.OffsetDateTime
 
 ) {
 
